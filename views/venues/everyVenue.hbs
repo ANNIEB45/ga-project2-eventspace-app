@@ -3,31 +3,32 @@
 <div class='home-button'>Home Page</div>
 </div>
 
+<img class='top-image' src="https://freestocks.org/fs/wp-content/uploads/2018/11/apartment_complex_by_the_lake_surrounded_by_forest-1000x667.jpg" alt="">
+
 <div class="header">Find The Venues For Your Next Event</div>
 
 <a href="/venue/new">
-    <button>Add Venue</button>
+    <button class='button'>Add Venue</button>
 </a>
 
-
+<div class="venue-list">
 {{#each allVenues}}
-<div class="venue-list"></div>
+<div class="venue-items">
+    <img src="https://styledstock.co/wp-content/uploads/2017/01/0115-600x401.jpg" alt="">
 <a href="/venue/{{_id}}">
-    <div>Name</div>
+<div class="venue-titles">
     <div>{{name}}</div>
     <br>
-
-    <div>Location</div>
     <div>{{location}}</div>
     <br>
-
+</a>
     <div>Capacity</div>
     <div>{{squareFeet}}</div>
     <br>
 
     <div>Pricing</div>
     <div>{{price}}</div>
-</a>
+
 <br>
 
 <div>Parking</div>
@@ -37,12 +38,13 @@
 
 <div>About Space</div>
 <div>
-    <p>{{about}}</p>
+{{about}}
 </div>
 <br>
+</div>
+</div>
 
-</div>
-</div>
+
 {{/each}}
 </div>
 

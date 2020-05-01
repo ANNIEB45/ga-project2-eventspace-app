@@ -4,6 +4,8 @@
     <button>Home</button>
 </a>
 
+
+
 <form action="/venue/{{singleVenue._id}}?_method=PUT" method="POST">
     <label>Venue</label>
     <input type="text" name="name" value="{{singleVenue.name}}" />
@@ -22,6 +24,9 @@
 
     <label>About Space:</label>
     <textarea type="text" name="about" rows="7" cols="30" value="{{singleVenue.about}}" ></textarea>
+
+      <label>Image URL</label>
+    <input type="text" name="image" value="{{singleVenue.image}}" />
 
     <input type="submit" value="Save" />
 </form>

@@ -21,7 +21,8 @@ const venueSchema = new Schema({
     about:{
         type: String,
         required: true
-    }
+    },
+    image: String
 })
 
 const venueCollection = mongoose.model('venue-db', venueSchema)

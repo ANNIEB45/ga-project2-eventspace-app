@@ -50,6 +50,7 @@ const vendorSchema = new Schema({
         type: String,
         required: true
     },
+    image: String
 })
 
 const vendorCollection = mongoose.model('vendor', vendorSchema)

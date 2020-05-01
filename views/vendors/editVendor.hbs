@@ -1,8 +1,14 @@
-<h1>Edit Vendor</h1>
+<div class="navbar">
+<div class='logo'>
+    <a href="/venue"> Fairy's Paradise</a>
+    </div>
+{{!-- use icon for edit/single/add pages --}}
+<span class="material-icons">
+<a href="/venue">home</a>  
+</span>
+</div>
+<div class='border-bottom'></div>
 
-<a href="/vendor">
-    <button>Home</button>
-</a>
 
 <form action="/vendor/{{singleVendor._id}}?_method=PUT" method="POST">
     <label>Business Name</label>

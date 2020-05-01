@@ -1,47 +1,53 @@
-<h1>All Vendors</h1>
+<div class="navbar">
+    <div class='logo'>
+        <a href="/vendor"> Fairy's Paradise</a>
+    </div>
+    {{!-- use icon for edit/single/add pages --}}
+    <span class="material-icons">
+        <a href="/vendor">home</a>
+    </span>
+</div>
+<div class='border-bottom'></div>
 
-<a href="/vendor/new">
-    <button>Add Vendor</button>
+<img class='top-image'
+    src="https://freestocks.org/fs/wp-content/uploads/2018/11/apartment_complex_by_the_lake_surrounded_by_forest-1000x667.jpg"
+    alt="">
+
+<div class="header">Find The Best Vendor For Your Next Event</div>
+
+<a href="/venue/new">
+    <button class='button'>Add Venue</button>
 </a>
 
-{{#each allVendors}}
+<div class="venue-list">
+    {{#each allVendors}}
+    <div class="venue-items">
+        <img src="https://freestocks.org/fs/wp-content/uploads/2018/08/bread_display_at_the_saint_dominics_fair-1000x667.jpg" alt="">
 
-<a href="/vendor/{{_id}}">
-    <div>Name</div>
-    <div>{{name}}</div>
-    <br>
+        <a href="/vendor/{{_id}}">
+            <div class="venue-titles">
+                <div>Name</div>
+                <div>{{name}}</div>
+                <br>
+        </a>
+
+        <div>Category</div>
+        <div>{{category}}</div>
+        <br>
+
+        <div>About</div>
+        <div>
+            <p>{{details}}</p>
+        </div>
+        <br>
+        <a href="/vendor/{{_id}}">
+    <button>View Vendor</button>
 </a>
 
-    <div>Local</div>
-    <div>{{local}}</div>
-    <br>
-
-    <div>Category</div>
-    <div>{{category}}</div>
-    <br>
-
-    <div>Email</div>
-    <div>{{email}}</div>
-<br>
-
-<div>Business Number</div>
-<div>{{phoneNumber}}</div>
-<br>
-
-<div>Website</div>
-<div>
-    <p>{{website}}</p>
+    </div>
 </div>
-<br>
 
-<div>About</div>
-<div>
-    <p>{{details}}</p>
-</div>
-<br>
-
-</div>
-<hr>
 {{/each}}
+</div>
 
 {{!-- ALL VENDORS TEMPLATE WORKS --}}

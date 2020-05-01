@@ -15,6 +15,10 @@ body{
     margin-bottom: 20px;
 }
 
+.hero-image{
+    background-image: url("https://freestocks.org/fs/wp-content/uploads/2018/02/food_and_drinks_market_lights-1000x667.jpg") ;
+}
+
 .top-image{
     width: 100%;
     opacity: 0.8;
@@ -67,6 +71,7 @@ body{
     flex-direction: column;
     margin: 20px 25px;
 }
+
 img{
 display: flex;
     justify-content: center;

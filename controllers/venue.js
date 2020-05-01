@@ -49,7 +49,7 @@ venueRouter.get('/:venueId', (req, res) => {
             console.log(singleVenue)
             console.log('-----------------------')
             // res.json(singleVenue)
-            res.render('venues/oneVenue', { singleVenue, reviews })
+            res.render('venues/oneVenue', {singleVenue})
         })
         .catch(err => {
             console.log('failed to print one venue')

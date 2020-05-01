@@ -10,6 +10,11 @@ body{
     border: 3px solid darkblue;
 }
 
+.border-bottom{
+    border-bottom: 2px solid greenyellow;
+    margin-bottom: 20px;
+}
+
 .top-image{
     width: 100%;
     opacity: 0.8;

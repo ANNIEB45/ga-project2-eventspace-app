@@ -1,0 +1,31 @@
+<h1>Add New Venue</h1>
+
+<a href="/venue">
+    <button>Home</button>
+</a>
+
+<form action="/venue" method="POST">
+    <label>Venue</label>
+    <input type="text" name="name" />
+
+    <label>Where are you located</label>
+    <input type="text" name="location" />
+
+    <label>How many square feet</label>
+    <input type="number" name="squareFeet" />
+
+    <label>Is parking space available</label>
+    <input type="boolean" name="parkingAvailable" />
+
+    <label>Price</label>
+    <input type="number" name="price" />
+
+    <label>Tell us about your venue</label>
+    <textarea type="text" name="about" rows="5" cols="20"></textarea>
+
+
+    <input type="submit" value="Create" />
+</form>
+
+{{!-- HOME BUTTON WORKS --}}
+{{!-- WORKS --}}

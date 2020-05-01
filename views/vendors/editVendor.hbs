@@ -1,0 +1,34 @@
+<h1>Edit Vendor</h1>
+
+<a href="/vendor">
+    <button>Home</button>
+</a>
+
+<form action="/vendor/{{singleVendor._id}}?_method=PUT" method="POST">
+    <label>Business Name</label>
+    <input type="text" name="name" value="{{singleVendor.name}}" />
+
+    <label>Are you local?</label>
+    <input type="text" name="local" value="{{singleVendor.local}}" />
+
+    <label>What kind of Business?</label>
+    <input type="text" name="category" value="{{singleVendor.category}}" />
+
+    <label>Email</label>
+    <input type="text" name="email" value="{{singleVendor.email}}" />
+
+    <label>Phone Number</label>
+    <input type="text" name="phoneNumber" value="{{singleVendor.phoneNumber}}" />
+
+    <label>Website</label>
+    <input type="text" name="website" value="{{singleVendor.website}}" />
+
+    <label>Tell us about your busines:</label>
+    <textarea type="text" name="details" value="{{singleVendor.details}}"></textarea>
+    
+    <input type="submit" value="Save" />
+
+</form>
+
+{{!-- BUG: detail field does not stay pre-filled and if no input deletes previous text on submission --}}
+{{!-- EDIT WORKS --}}

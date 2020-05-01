@@ -1,0 +1,27 @@
+<h1>Create New Blog</h1>
+
+<a href="/blog">
+    <button>Home</button>
+</a>
+
+<form action="/blog" method="POST">
+    <label>Date</label>
+    <input type="datetime-local" name="date" />
+
+     <label>Author</label>
+    <input type="text" name="author" />
+
+     <label>Title</label>
+    <input type="text" name="title" />
+    <br>
+    <br>
+
+    <label>Post</label>
+    <textarea type="text" name="post" rows="20" cols="80"/></textarea>
+
+
+    <input type="submit" value="Post" />
+</form>
+
+{{!-- HOME BUTTON WORKS --}}
+{{!-- WORKS --}}

@@ -1,0 +1,36 @@
+<h1>All Blogs</h1>
+
+<a href="/blog/new">
+    <button>Create Post</button>
+</a>
+<br>
+
+{{#each allBlogs}}
+
+<a href="/blog/{{_id}}">
+    <button>See Blog</button>
+</a>
+
+<div>Title</div>
+<div>{{title}}</div>
+<br>
+
+<div>Author</div>
+<div>{{author}}</div>
+<br>
+
+<div>Date</div>
+<div>{{date}}</div>
+<br>
+
+
+<div>Post</div>
+<div>{{post}}</div>
+<br>
+
+<hr>
+{{/each}}
+
+
+{{!-- SEE BLOG BUTTON WORKS --}}
+{{!-- ALL BLOGS TEMPLATE WORKS --}}

@@ -1,0 +1,47 @@
+<h1>All Vendors</h1>
+
+<a href="/vendor/new">
+    <button>Add Vendor</button>
+</a>
+
+{{#each allVendors}}
+
+<a href="/vendor/{{_id}}">
+    <div>Name</div>
+    <div>{{name}}</div>
+    <br>
+</a>
+
+    <div>Local</div>
+    <div>{{local}}</div>
+    <br>
+
+    <div>Category</div>
+    <div>{{category}}</div>
+    <br>
+
+    <div>Email</div>
+    <div>{{email}}</div>
+<br>
+
+<div>Business Number</div>
+<div>{{phoneNumber}}</div>
+<br>
+
+<div>Website</div>
+<div>
+    <p>{{website}}</p>
+</div>
+<br>
+
+<div>About</div>
+<div>
+    <p>{{details}}</p>
+</div>
+<br>
+
+</div>
+<hr>
+{{/each}}
+
+{{!-- ALL VENDORS TEMPLATE WORKS --}}

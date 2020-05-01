@@ -1,0 +1,48 @@
+<h1>Vendor</h1>
+
+<a href="/vendor">
+    <button>Home</button>
+</a>
+
+<div>{{singleVendor.name}}</div>
+<br>
+
+<di>Are they local?</div>
+    <div>{{singleVendor.local}}</div>
+    <br>
+
+    <div>What Type of Business</div>
+    <div>{{singleVendor.category}}</div>
+    <br>
+
+    <div>Email</div>
+    <div>{{singleVendor.email}}</div>
+    <br>
+
+    <div>Phone Number</div>
+    <div>{{singleVendor.phoneNumber}}</div>
+    <br>
+
+    <div>Vendor Details</div>
+    <div>{{singleVendor.details}}</div>
+    <br>
+
+    <div>Website</div>
+    <div>{{singleVendor.website}}</div>
+    <br>
+
+
+    <a href="/vendor/{{singleVendor._id}}/edit">
+        <button>Edit Issue</button>
+    </a>
+
+    <form action="/vendor/{{singleVendor._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Issue" />
+    </form>
+<br>
+
+    
+
+    {{!-- EDIT BUTTON WORKS --}}
+    {{!-- DELETE BUTTON WORKS --}}
+    {{!-- WORKS --}}

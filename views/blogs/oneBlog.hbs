@@ -1,0 +1,69 @@
+<h1>Blog</h1>
+
+<a href="/blog">
+    <button>Home</button>
+</a>
+
+<div>Title</div>
+<div>{{singleBlog.title}}</div>
+<br>
+
+<div>Author</div>
+<div>{{singleBlog.author}}</div>
+<br>
+
+<div>Date</div>
+<div>{{singleBlog.date}}</div>
+<br>
+
+
+<div>Post</div>
+<div>{{singleBlog.post}}</div>
+<br>
+
+
+<a href="/blog/{{singleBlog._id}}/edit">
+    <button>Edit Blog</button>
+</a>
+
+<form action="/blog/{{singleBlog._id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Blog" />
+</form>
+
+{{!-- DELETE BUTTON WORKS --}}
+{{!-- EDIT BUTTON WORKS --}}
+{{!-- HOME BUTTON WORKS --}}
+{{!-- WORKS --}}
+
+
+<form action="/review" method="POST">
+    <input type="hidden" value="{{singleBlog._id}}" name="blogId" />
+
+    <h1>Add A Comment</h1>
+    <br>
+
+    <label>Date</label>
+    <input type="date" name="date" />
+    </br>
+    <br>
+
+    <label>Comment</label>
+    <textarea type="text" name="comment" rows="5" cols="50"></textarea>
+
+
+    <input type="submit" value="Create" />
+</form>
+
+
+<h1>Reviews</h1>
+{{#each reviews}}
+
+{{date}}
+<br>
+{{comment}}
+<br>
+
+{{!-- {{blogId}} --}}
+
+<hr>
+{{/each}}

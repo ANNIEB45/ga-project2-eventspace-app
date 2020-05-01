@@ -1,0 +1,28 @@
+<h1>Edit Blog</h1>
+
+<a href="/blog">
+    <button>Home</button>
+</a>
+
+<form action="/blog/{{singleBlog._id}}?_method=PUT" method="POST">
+    <label>Date</label>
+    <input type="datetime-local" name="date" value="{{singleBlog.date}}" />
+
+ <label>Title</label>
+    <input type="text" name="title" value="{{singleBlog.title}}" />
+
+ <label>Author</label>
+    <input type="text" name="author" value="{{singleBlog.author}}" />
+<br>
+<br>
+
+    <label>Post</label>
+    <textarea type="text" name="post" rows="20" cols="80" value="{{singleBlog.post}}"></textarea>
+
+    
+    <input type="submit" value="Save" />
+
+</form>
+
+{{!-- HOME BUTTON WORKS --}}
+{{!-- EDIT WORKS --}}

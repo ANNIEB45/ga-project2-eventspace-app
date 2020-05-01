@@ -1,0 +1,51 @@
+<div class="navbar">
+<div class='logo'>Logo</div>
+<div class='home-button'>Home Page</div>
+</div>
+
+<div class="header">Find The Venues For Your Next Event</div>
+
+<a href="/venue/new">
+    <button>Add Venue</button>
+</a>
+
+
+{{#each allVenues}}
+<div class="venue-list"></div>
+<a href="/venue/{{_id}}">
+    <div>Name</div>
+    <div>{{name}}</div>
+    <br>
+
+    <div>Location</div>
+    <div>{{location}}</div>
+    <br>
+
+    <div>Capacity</div>
+    <div>{{squareFeet}}</div>
+    <br>
+
+    <div>Pricing</div>
+    <div>{{price}}</div>
+</a>
+<br>
+
+<div>Parking</div>
+{{!-- need if/else statement here --}}
+<div>{{parkingAvailable}}</div>
+<br>
+
+<div>About Space</div>
+<div>
+    <p>{{about}}</p>
+</div>
+<br>
+
+</div>
+</div>
+{{/each}}
+</div>
+
+
+{{!-- ADD VENUE BUTTON WORKS --}}
+{{!-- ALL VENUES TEMPLATE WORKS --}}

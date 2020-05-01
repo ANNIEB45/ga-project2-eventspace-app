@@ -1,0 +1,21 @@
+body{
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    margin: 30px;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+}
+
+.venue-list{
+    width: 100%;
+    max-width: 908px;
+    display: flex;
+    flex-wrap: wrap;
+}

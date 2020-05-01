@@ -1,0 +1,39 @@
+<h1>Venue</h1>
+
+<a href="/venue">
+    <button>Home</button>
+</a>
+
+<div>{{singleVenue.name}}</div>
+
+<di>Status</div>
+    <div>{{singleVenue.location}}</div>
+
+    <div>Square Feet</div>
+    <div>{{singleVenue.squareFeet}}</div>
+
+    <div>Parking</div>
+    <div>{{singleVenue.parkingAvailable}}</div>
+
+    <div>Price</div>
+    <div>{{singleVenue.price}}</div>
+
+    <div>About Venue</div>
+    <div>{{singleVenue.about}}</div>
+
+
+    <a href="/venue/{{singleVenue._id}}/edit">
+        <button>Edit Issue</button>
+    </a>
+
+    <form action="/venue/{{singleVenue._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Issue" />
+    </form>
+
+    <br>
+
+   
+    {{!-- DELETE BUTTON WORKS --}}
+    {{!-- EDIT BUTTON WORKS --}}
+    {{!-- HOME BUTTON --}}
+    {{!-- WORKS --}}

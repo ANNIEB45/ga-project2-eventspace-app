@@ -1,0 +1,27 @@
+<h1>Review</h1>
+
+<a href="/review">
+    <button>Home</button>
+</a>
+
+<div>Date</div>
+<div>{{singleReview.date}}</div>
+<br>
+
+<di>Comment</div>
+<div>{{singleReview.comment}}</div>
+<br>
+
+
+<a href="/review/{{singleReview._id}}/edit">
+    <button>Edit Review</button>
+</a>
+
+<form action="/review/{{singleReview._id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Review" />
+</form>
+
+    {{!-- DELETE BUTTON WORKS --}}
+    {{!-- EDIT BUTTON WORKS --}}
+    {{!-- HOME BUTTON WORKS --}}
+    {{!-- WORKS --}}

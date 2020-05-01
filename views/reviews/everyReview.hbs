@@ -1,0 +1,26 @@
+<h1>All Comments</h1>
+
+<a href="/review/new">
+    <button>Add a Comment</button>
+</a>
+<br>
+{{#each allReviews}}
+
+<a href="/review/{{_id}}">
+<button>See Comment</button>
+</a>
+    <div>Date</div>
+    <div>{{date}}</div>
+    <br>
+
+    <div>Comment</div>
+    <div>{{comment}}</div>
+    <br>
+
+</div>
+<hr>
+{{/each}}
+
+
+{{!-- SEE REVIEW BUTTON WORKS --}}
+{{!-- ALL REVIEWS TEMPLATE WORKS --}}

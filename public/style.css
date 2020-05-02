@@ -1,3 +1,8 @@
+htm, body{
+    margin: 0;
+    padding: 0;
+
+}
 body{
     font-family: 'Maven Pro', sans-serif;
 }
@@ -5,19 +10,47 @@ body{
 .navbar{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
-    padding: 15px;
-    border: 3px solid darkblue;
+    margin: 20px 0 35px 0;
+    padding: 10px 0 8px;
+    border-bottom: 3px solid darkblue;
 }
 
-.border-bottom{
-    border-bottom: 2px solid greenyellow;
-    margin-bottom: 20px;
+.logo{
+    font-size: 47px;
+    text-decoration: none;
+    text-decoration: line-through;
+    font-family: 'Yellowtail', cursive;
+    margin-left: 60px;
+    color: oldlace;
 }
-
-.hero-image{
+.material-icons{
+    font-size: 45px;
+    margin: 0 60px 0 0;
+}
+.icons{
+    text-decoration: none;
+    color: lightslategrey;
+}
+.hero-image-venue{
     background-image: url("https://freestocks.org/fs/wp-content/uploads/2018/02/food_and_drinks_market_lights-1000x667.jpg") ;
+    background-color: #cccccc;
+    height: 345px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    z-index: -2;
 }
+
+.hero-text{
+    text-align: right;
+    position: relative;
+    top: 76%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: white
+}
+
 
 .top-image{
     width: 100%;
@@ -27,29 +60,28 @@ body{
 
 .header{
     width: 100%;
-    text-align: center;
     font-size: 48px;
 }
 
 .button{
     transition-duration: 0.4s;
-    margin: 60px 20px -10px 20px;
+    margin: -18px 20px 40px 20px;
     padding: 20px;
     border-radius: 9px;
     font-size: 20px;
     background: rosybrown;
 }
 .button:hover {
-    background-color: goldenrod;
-    color: white;
+    background-color: rgb(201, 24, 130);
+    color: rgb(244, 237, 242);
 }
 
 .venue-list{
     width: 100%;
-    /* max-width: 908px; */
+    max-width: 900px;
     display: flex;
-    flex-wrap: wrap;
-    /* border: 3px solid; */
+    flex-wrap: wrap-reverse;
+    margin: 0 auto;
 }
 
 .venue-items a{
@@ -60,12 +92,22 @@ body{
     display: flex;
     flex-direction: column;
     /* border: 3px solid goldenrod; */
-    margin: 15px;
+    margin: 15px 8px 20px 8px;
     padding: 36px 10px 5px 10px;
     width: 345px;
     height: 204.16;
 }
 
+.venue-items img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 205px;
+    background-color: turquoise;    
+    overflow: hidden;
+    object-fit: cover;
+}
 .venue-titles{
     display: flex;
     flex-direction: column;
@@ -79,5 +121,54 @@ display: flex;
     width: 100%;
 }
 
-/* Vendor Add Page Styling */
+/* Vendor Page Styling */
+/* Get All Page */
+.hero-image-vendor{
+    background-image: url("https://freestocks.org/fs/wp-content/uploads/2016/09/I_love_my_coffee-1000x667.jpg") ;
+    background-color: #cccccc;
+    height: 345px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    z-index: -2;
+}
+/* Get One page */
 
+.img-container{
+    display: flex;
+    /* justify-content: center; */
+    /* align-content: center; */
+    width: 100%;
+    height: 400px;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    position: relative;
+    /* background-position: center; */
+    /* left: 16px; */
+    /* right: 16px; */
+    z-index: -2;
+}
+
+.edit-delete-button{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 32px;
+}
+
+.img-container .venue-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: turquoise;    
+    overflow: hidden;
+    object-fit: cover;
+    margin: 0 20px;
+}
+.item-container{
+    display: flex;
+    margin: 15px 50px;
+    flex-direction: column;
+}

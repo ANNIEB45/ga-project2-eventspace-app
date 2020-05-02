@@ -1,52 +1,51 @@
+<div class="container">
 <div class="navbar">
-<div class='logo'>
-    <a href="/venue"> Fairy's Paradise</a>
+    <div class='logo-container'>
+        <a class='logo' href="/venue"> Fairy's Wand</a>
     </div>
-{{!-- use icon for edit/single/add pages --}}
-<span class="material-icons">
-<a href="/venue">home</a>  
-</span>
+    {{!-- use icon for edit/single/add pages --}}
+    <span class="material-icons">
+        <a class='icons' href="/venue">home</a>
+    </span>
 </div>
 <div class='border-bottom'></div>
 
-<div class="hero-image">
+<div class="hero-image-venue">
     <div class="hero-text">
-{{!-- <img class='top-image' src="" alt=""> --}}
-
-<div class="header">Find The Venues For Your Next Event</div>
-
+        <div class="header">Find The Venue For Your Next Event</div>
+    </div>
+</div>
 <a href="/venue/new">
     <button class='button'>Add Venue</button>
 </a>
-</div>
-</div>
+
 <div class="venue-list">
-{{#each allVenues}}
-<div class="venue-items">
-    <img src="{{image}}" alt="">
-<a href="/venue/{{_id}}">
-<div class="venue-titles">
-    <div>{{name}}</div>
-    <br>
-    <div>{{location}}</div>
-    <br>
-</a>
-   <br>
-<div>About Space</div>
-<div>{{about}}</div>
-<br>
+    {{#each allVenues}}
+    <div class="venue-items">
+        <img src="{{image}}" alt="">
+        <a href="/venue/{{_id}}">
+            <div class="venue-titles">
+                <div>{{name}}</div>
+                <br>
+                <div>{{location}}</div>
+                <br>
+        </a>
+        <br>
+        <div>About Space</div>
+        <div>{{about}}</div>
+        <br>
 
-<a href="/venue/{{_id}}">
-    <button>View Venue</button>
-</a>
+        <a href="/venue/{{_id}}">
+            <button>View Venue</button>
+        </a>
 
-</div>
+    </div>
 </div>
 
 
 {{/each}}
 </div>
-
+</div>
 
 {{!-- ADD VENUE BUTTON WORKS --}}
 {{!-- ALL VENUES TEMPLATE WORKS --}}

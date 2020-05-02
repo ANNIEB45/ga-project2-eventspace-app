@@ -1,13 +1,36 @@
-<h1>Vendor</h1>
+<div class="navbar">
+    <div class='logo-container'>
+        <a class='logo' href="/vendor"> Fairy's Wand</a>
+    </div>
+    {{!-- use icon for edit/single/add pages --}}
+    <span class="material-icons">
+        <a class='icons' href="/vendor">home</a>
+    </span>
+</div>
 
-<a href="/vendor">
-    <button>Home</button>
-</a>
 
-<div>{{singleVendor.name}}</div>
-<br>
+<div class="button-container">
+    <div class="img-container">
+        <img class='venue-image' src="{{singleVendor.image}}" alt="venue image">
+    </div>
+    <a href="/vendor/{{singleVendor._id}}/edit">
+        <div class='edit-delete-button'>
+            <button class='button'>Edit Venue</button>
+        </div>
+    </a>
+    <form action="/vendor/{{singleVendor._id}}?_method=DELETE" method="POST">
+        <div class='edit-delete-button'>
+            <input class='button' type="submit" value="Delete Venue" />
+        </div>
+    </form>
+</div>
 
-<di>Are they local?</div>
+
+<div class="item-container">
+    <div>{{singleVendor.name}}</div>
+    <br>
+
+    <div>Are they local?</div>
     <div>{{singleVendor.local}}</div>
     <br>
 
@@ -30,19 +53,12 @@
     <div>Website</div>
     <div>{{singleVendor.website}}</div>
     <br>
+</div>
 
 
-    <a href="/vendor/{{singleVendor._id}}/edit">
-        <button>Edit Issue</button>
-    </a>
 
-    <form action="/vendor/{{singleVendor._id}}?_method=DELETE" method="POST">
-        <input type="submit" value="Delete Issue" />
-    </form>
-<br>
 
-    
 
-    {{!-- EDIT BUTTON WORKS --}}
-    {{!-- DELETE BUTTON WORKS --}}
-    {{!-- WORKS --}}
+{{!-- EDIT BUTTON WORKS --}}
+{{!-- DELETE BUTTON WORKS --}}
+{{!-- WORKS --}}

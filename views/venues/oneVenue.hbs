@@ -1,13 +1,34 @@
-<h1>Venue</h1>
+<div class="navbar">
+    <div class='logo-container'>
+        <a class='logo' href="/venue"> Fairy's Wand</a>
+    </div>
+    {{!-- use icon for edit/single/add pages --}}
+    <span class="material-icons">
+        <a class='icons' href="/venue">home</a>
+    </span>
+</div>
 
-<a href="/venue">
-    <button>Home</button>
-</a>
-<div>{{singleVenue.image}}</div>
 
-<div>{{singleVenue.name}}</div>
+<div class="button-container">
+    <div class="img-container">
+    <img class='venue-image' src="{{singleVenue.image}}" alt="">
+</div>
+    <a href="/venue/{{singleVenue._id}}/edit">
+    <div class='edit-delete-button'>
+        <button class='button'>Edit Venue</button>
+        </div>
+    </a>
+    <form action="/venue/{{singleVenue._id}}?_method=DELETE" method="POST">
+    <div class='edit-delete-button'>
+        <input class='button' type="submit" value="Delete Venue" />
+        </div>
+    </form>
+</div>
 
-<di>Status</div>
+<div class="item-container">
+    <div>{{singleVenue.name}}</div>
+
+    <div>Location</div>
     <div>{{singleVenue.location}}</div>
 
     <div>Square Feet</div>
@@ -22,19 +43,10 @@
     <div>About Venue</div>
     <div>{{singleVenue.about}}</div>
 
+</div>
 
-    <a href="/venue/{{singleVenue._id}}/edit">
-        <button>Edit Issue</button>
-    </a>
 
-    <form action="/venue/{{singleVenue._id}}?_method=DELETE" method="POST">
-        <input type="submit" value="Delete Issue" />
-    </form>
-
-    <br>
-
-   
-    {{!-- DELETE BUTTON WORKS --}}
-    {{!-- EDIT BUTTON WORKS --}}
-    {{!-- HOME BUTTON --}}
-    {{!-- WORKS --}}
+{{!-- DELETE BUTTON WORKS --}}
+{{!-- EDIT BUTTON WORKS --}}
+{{!-- HOME BUTTON --}}
+{{!-- WORKS --}}

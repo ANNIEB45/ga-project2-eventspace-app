@@ -14,26 +14,34 @@
 <div class="form-container">
     <form action="/venue" method="POST">
         <div class="form-wrapper">
-            <label>Venue</label>
-            <input type="text" name="name" />
-
-            <label>Where are you located</label>
-            <input type="text" name="location" />
-
-            <label>How many square feet</label>
-            <input type="number" name="squareFeet" />
-
-            <label>Is parking space available</label>
-            <input type="boolean" name="parkingAvailable" />
-
-            <label>Price</label>
-            <input type="number" name="price" />
-
-            <label>Tell us about your venue</label>
-            <textarea type="text" name="about" rows="5" cols="20"></textarea>
-
-            <label>Image URL</label>
-            <input type="text" name="image" />
+            <div class="form-items">
+                <label class="label-items">Venue</label>
+                <input type="text" name="name" />
+            </div>
+            <div class="form-items">
+                <label class="label-items">Where are you located</label>
+                <input type="text" name="location" />
+            </div>
+            <div class="form-items">
+                <label class="label-items">How many square feet</label>
+                <input type="number" name="squareFeet" />
+            </div>
+            <div class="form-items">
+                <label class="label-items">Is parking space available</label>
+                <input type="boolean" name="parkingAvailable" />
+            </div>
+            <div class="form-items">
+                <label class="label-items">Price</label>
+                <input type="number" name="price" />
+            </div>
+            <div class="form-items">
+                <label class="label-items">Tell us about your venue</label>
+                <textarea type="text" name="about" rows="5" cols="20"></textarea>
+            </div>
+            <div class="form-items">
+                <label class="label-items">Image URL</label>
+                <input type="text" name="image" />
+            </div>
         </div>
         <input type="submit" value="Create" />
 

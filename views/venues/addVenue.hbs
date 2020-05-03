@@ -1,51 +1,70 @@
-<div class="navbar">
-    <div class='logo'>
-        <a href="/venue"> Fairy's Paradise</a>
-    </div>
-    {{!-- use icon for edit/single/add pages --}}
-    <span class="material-icons">
-        <a href="/venue">home</a>
-    </span>
-</div>
-<div class='border-bottom'></div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        {{!-- modal content:navbar,header,body-form --}}
+        <div class="modal-content">
+            <div class="modal-header">
+                {{!-- modal navbar w/logo and home button --}}
+                <div class="navbar">
+                    <div class='logo'>
+                        <a href="/venue"> Fairy's Paradise</a>
+                    </div>
+                    {{!-- use icon for edit/single/add pages --}}
+                    <span class="material-icons">
+                        <a href="/venue">home</a>
+                    </span>
+                </div>
+                <div class='border-bottom'></div>
+                {{!-- modal header --}}
+                <button type="button" class="close-btn" data-dismiss="modal">&times;</button>
+                <div class='vendor-header'>List Your Venue With Us</div>
+            </div>
 
-<div class='vendor-header'>Add New Venue</div>
+            {{!-- modal body --}}
+            <div class="modal-body">
+                <div class="form-container">
+                    <form action="/venue" method="POST">
+                        <div class="form-wrapper">
+                            <div class="form-items">
+                                <label class="label-items">Venue</label>
+                                <input type="text" name="name" />
+                            </div>
+                            <div class="form-items">
+                                <label class="label-items">Where are you located</label>
+                                <input type="text" name="location" placeholder="City,State" />
+                            </div>
+                            <div class="form-items">
+                                <label class="label-items">How many square feet</label>
+                                <input type="number" name="squareFeet" />
+                            </div>
+                            <div class="form-items">
+                                {{!-- make radio button --}}
+                                <label class="label-items">Is parking space available</label>
+                                <input type="boolean" name="parkingAvailable" />
+                            </div>
+                            <div class="form-items">
+                                {{!-- convert to US currency format --}}
+                                <label class="label-items">Price</label>
+                                <input type="number" name="price" />
+                            </div>
+                            <div class="form-items">
+                                <label class="label-items">Tell us about your venue</label>
+                                <textarea type="text" name="about" rows="5" cols="20"></textarea>
+                            </div>
+                            <div class="form-items">
+                                <label class="label-items">Image URL</label>
+                                <input type="text" name="image" />
+                            </div>
+                        </div>
+                        <input type="submit" value="Create" />
 
-<div class="form-container">
-    <form action="/venue" method="POST">
-        <div class="form-wrapper">
-            <div class="form-items">
-                <label class="label-items">Venue</label>
-                <input type="text" name="name" />
+                    </form>
+                </div>
             </div>
-            <div class="form-items">
-                <label class="label-items">Where are you located</label>
-                <input type="text" name="location" />
-            </div>
-            <div class="form-items">
-                <label class="label-items">How many square feet</label>
-                <input type="number" name="squareFeet" />
-            </div>
-            <div class="form-items">
-                <label class="label-items">Is parking space available</label>
-                <input type="boolean" name="parkingAvailable" />
-            </div>
-            <div class="form-items">
-                <label class="label-items">Price</label>
-                <input type="number" name="price" />
-            </div>
-            <div class="form-items">
-                <label class="label-items">Tell us about your venue</label>
-                <textarea type="text" name="about" rows="5" cols="20"></textarea>
-            </div>
-            <div class="form-items">
-                <label class="label-items">Image URL</label>
-                <input type="text" name="image" />
+            <div class="modal-footer">
+                <button type="button" class="close-btn" data-dismiss="modal">Close</button>
             </div>
         </div>
-        <input type="submit" value="Create" />
-
-    </form>
+    </div>
 </div>
 {{!-- HOME BUTTON WORKS --}}
 {{!-- WORKS --}}

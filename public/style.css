@@ -121,6 +121,41 @@ display: flex;
     width: 100%;
 }
 
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border-top: 2px solid black;
+    background: cadetblue;
+    padding: 60px;
+    font-size: 25px;
+}
+
+.social-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 80px;
+}
+
+ .form-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    /* border: 2px solid darkblue; */
+    font-size: 24px;
+    align-items: flex-start;
+}
+
+.form-items{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.label-items{
+    margin-bottom: 16px
+}
+
 /* Vendor Page Styling */
 /* Get All Page */
 .hero-image-vendor{

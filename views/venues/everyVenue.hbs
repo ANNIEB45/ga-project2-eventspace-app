@@ -1,63 +1,62 @@
 <div class="container">
-<div class="navbar">
-    <div class='logo-container'>
-        <a class='logo' href="/venue"> Fairy's Wand</a>
+    <div class="navbar">
+        <div class='logo-container'>
+            <a class='logo' href="/venue"> Fairy's Wand</a>
+        </div>
+        {{!-- use icon for edit/single/add pages --}}
+        <span class="material-icons">
+            <a class='icons' href="/venue">home</a>
+        </span>
     </div>
-    {{!-- use icon for edit/single/add pages --}}
-    <span class="material-icons">
-        <a class='icons' href="/venue">home</a>
-    </span>
-</div>
-<div class='border-bottom'></div>
+    <div class='border-bottom'></div>
 
-<div class="hero-image-venue">
-    <div class="hero-text">
-        <div class="header">Find The Venue For Your Next Event</div>
+    <div class="hero-image-venue">
+        <div class="hero-text">
+            <div class="header">Find The Venue For Your Next Event</div>
+        </div>
     </div>
-</div>
-{{!-- Button w/popup fill form --}}
-<a href="/venue/new">
-    <button class='myBtn' data-toggle="modal" data-target="#myModal">Add Venue</button>
-</a>
+    {{!-- Button w/popup fill form --}}
+    <a href="/venue/new">
+        <button class='myBtn' data-toggle="modal" data-target="#myModal">Add Venue</button>
+    </a>
 
-<div class="venue-list">
-    {{#each allVenues}}
-    <div class="venue-items">
-        <img src="{{image}}" alt="">
-        <a href="/venue/{{_id}}">
-            <div class="venue-titles">
-                <div>{{name}}</div>
-                <br>
-                <div>{{location}}</div>
-                <br>
-        </a>
-        <br>
-        <div>About Space</div>
-        <div>{{about}}</div>
-        <br>
+    <div class="venue-list">
+        {{#each allVenues}}
+        <div class="venue-items">
+            <img src="{{image}}" alt="">
+            <a class="mainpage-link" href="/venue/{{_id}}">
+                <div class="venue-titles">
 
-        <a href="/venue/{{_id}}">
-            <button>View Venue</button>
-        </a>
+                    <div>{{name}}</div>
+                    <br>
+                    <div class="main-page-location-item">{{location}}</div>
+                    <br>
+            </a>
+            <br>
 
+            <div class="view-button">
+                <a href="/venue/{{_id}}">
+                    <button>View Venue</button>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
 
 
-{{/each}}
+    {{/each}}
 </div>
 </div>
 
-  <footer>
-      <div class='footer-container'>
-      <div>Created by Annie T. Bellefleur</div>
-      <div class="social-container">Follow Us
-        <a href="https://www.linkedin.com/in/annie-t-bellefleur-04a696a7/">LinkedIn</a> 
-        <a href="https://twitter.com/AfiaTheLegend">Twitter</a> 
-        <a href="https://www.instagram.com/browneyed_royalty/">Instagram</a> 
-      </div>
-      </div>
-    </footer>
+<footer>
+    <div class='footer-container'>
+        <div>Created by Annie T. Bellefleur</div>
+        <div class="social-container">Follow Us
+            <a href="https://www.linkedin.com/in/annie-t-bellefleur-04a696a7/">LinkedIn</a>
+            <a href="https://twitter.com/AfiaTheLegend">Twitter</a>
+            <a href="https://www.instagram.com/browneyed_royalty/">Instagram</a>
+        </div>
+    </div>
+</footer>
 
 {{!-- ADD VENUE BUTTON WORKS --}}
 {{!-- ALL VENUES TEMPLATE WORKS --}}

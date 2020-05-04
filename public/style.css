@@ -86,43 +86,72 @@ body{
 
 .venue-items a{
     text-decoration: none;
+    color: dimgray;
 }
 
 .venue-items{
     display: flex;
     flex-direction: column;
-    /* border: 3px solid goldenrod; */
-    margin: 15px 8px 20px 8px;
-    padding: 36px 10px 5px 10px;
+    border: 3px solid goldenrod;
+    margin: 26px 18px 20px 8px;
+    padding: 10px;
     width: 345px;
     height: 204.16;
+    border-radius: 15px;
+
 }
 
 .venue-items img{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 275px;
-    height: 205px;
-    background-color: turquoise;    
+    width: 345px;
+    height: 256px;
+    background-color: turquoise;
     overflow: hidden;
     object-fit: cover;
     border-radius: 10px;
+    margin: 0 auto;
 
 }
 .venue-titles{
     display: flex;
     flex-direction: column;
     margin: 20px 25px;
+    font-size: 20px;
+
 }
 
 img{
-display: flex;
+    display: flex;
     justify-content: center;
     align-content: center;
     width: 100%;
 }
 
+.main-page-location-item{
+    font-size: 18px;
+    line-height: 0px;
+    padding: 0px 0 20px 10px;
+}
+
+.view-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.view-button a{
+    border: 2px solid;
+    border-radius: 10px;
+
+}
+
+.view-button button{
+    font-size: 20px;
+    line-height: 32px;
+    background: rosybrown;
+    border-radius: 4px;
+}
 .footer-container{
     display: flex;
     flex-direction: row;

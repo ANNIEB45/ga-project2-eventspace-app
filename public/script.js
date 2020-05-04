@@ -1,6 +1,7 @@
 // Modal
 // Get the modal
 const modal = document.getElementById("myModal")
+console.log(modal)
 // Get the button that opens the modal
 const btn = document.querySelector(".myBtn")
 
@@ -8,11 +9,12 @@ const btn = document.querySelector(".myBtn")
 const closeBtn = document.getElementsByClassName("close-btn")
 
 btn.addEventLister('click', () =>{
-    modal.style.display = 'block';
+    modal.style.display = 'block'
 })
+console.log(btn)
 
 closeBtn.addEventLister('click', () =>{
-    modal.style.display = "none"
+    modal.style.display = 'none'
 })
  
 window.addEventLister('click', (e) =>{
@@ -20,3 +22,20 @@ window.addEventLister('click', (e) =>{
         modal.display.style = 'none'
     }
 })
+
+// for price input field
+// let currencyFormat = document.getElementById('currency').value 
+
+// // function priceInput() {
+// //     if(currencyFormat.indexOf("$") != 0){
+// //         currencyFormat += "$"
+// //     }
+// //     document.getElementById('currency').value = currencyFormat
+// // }
+
+// currencyFormat.addEventLister('change', () =>{
+//     if(currencyFormat.indexOf("$") != 0){
+//         currencyFormat += "$"
+//     }
+//     document.getElementById('currency').value = currencyFormat
+// })

@@ -12,7 +12,7 @@ body{
     justify-content: space-between;
     margin: 20px 0 35px 0;
     padding: 10px 0 8px;
-    border-bottom: 3px solid darkblue;
+    border-bottom: 3px solid darkgoldenrod;
 }
 
 .logo{
@@ -23,7 +23,7 @@ body{
     margin-left: 60px;
     color: oldlace;
 }
-.material-icons{
+.navbar .material-icons{
     font-size: 45px;
     margin: 0 60px 0 0;
 }
@@ -107,6 +107,8 @@ body{
     background-color: turquoise;    
     overflow: hidden;
     object-fit: cover;
+    border-radius: 10px;
+
 }
 .venue-titles{
     display: flex;
@@ -126,7 +128,7 @@ display: flex;
     flex-direction: row;
     margin: 0 auto;
     border-top: 2px solid black;
-    background: cadetblue;
+    background: darkgoldenrod;
     padding: 60px;
     font-size: 25px;
 }
@@ -204,11 +206,87 @@ display: flex;
 }
 .item-container{
     display: flex;
-    margin: 15px 50px;
+    margin: -11px 50px 0 50px;
     flex-direction: column;
+   
 }
 
+.name-item{
+    font-size: 50px;
+    line-height: 75px;
+    margin-bottom: 10px;
+}
+
+.location-wrapper{
+    padding-bottom: 13px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.location-wrapper .material-icons{
+    font-size: 34px;
+}
+
+.location-item{
+    margin: 5px 0 5px 5px;
+}
+
+.single-venue-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.single-sqft-header{
+    margin: 0 6px 0 10px
+}
+
+.single-sqft-item {
+    margin-right: 15px;
+}
+
+.single-parking-header{
+    margin: 0 6px;
+}
+
+.single-parking-item{
+    margin: 1px 15px 0px 0px;
+}
+
+.single-price-header{
+    margin: 0 6px;
+    font-size: 20px;
+}
+
+.single-price-item{
+    margin: 2px 15px 0 0;
+}
+
+.about-header{
+    font-size: 32px;
+    margin-top: 32px;
+    line-height: 3;
+}
+
+.about-text-area{
+    height: 96px;
+    overflow: hidden;
+    position: relative;
+}
 /* Modal Styling */
+
+#myModal{
+    background-color: rgba(120, 115, 115, 0.8) ;
+}
+
+.fade{
+    transition: opacity .15s linear;
+}
 .modal{
     /* display: none; */
     position: fixed;
@@ -217,10 +295,11 @@ display: flex;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.5);
+    /* width: 100%;
+    height: 100%; */
+    z-index: 30;
+    /* background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5); */
 }
 
 .myBtn{
@@ -231,6 +310,9 @@ display: flex;
     font-size: 20px;
     background: rosybrown;
 }
+
+
+
 .modal-header{
     padding: 2px 16px;
     background-color: #5cb85c;
@@ -243,9 +325,10 @@ display: flex;
     position: relative;
     background-color: #fefefe;
     padding: 0;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 80%;
-    border: 1px solid #888;
+    border: 2px solid grey;
     animation-name: animatetop;
     animation-duration: 0.4s;
     -webkit-animation-name: animatetop;
@@ -267,15 +350,22 @@ display: flex;
     border-radius: 10px;
     margin: 10px;
 }
-.close-btn close-top{
+
+.close-button-top{
     display: flex;
     justify-content: flex-end;
-    color: lightgray;
-    font-weight: 24px;
-    font-weight: bold;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px;
+}
+
+.vendor-header{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.close-btn {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
 }
 
 .close-btn:hover{

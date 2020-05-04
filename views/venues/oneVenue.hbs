@@ -11,37 +11,56 @@
 
 <div class="button-container">
     <div class="img-container">
-    <img class='venue-image' src="{{singleVenue.image}}" alt="">
-</div>
+        <img class='venue-image' src="{{singleVenue.image}}" alt="">
+    </div>
     <a href="/venue/{{singleVenue._id}}/edit">
-    <div class='edit-delete-button'>
-        <button class='button'>Edit Venue</button>
+        <div class='edit-delete-button'>
+            <button class='button'>Edit Venue</button>
         </div>
     </a>
     <form action="/venue/{{singleVenue._id}}?_method=DELETE" method="POST">
-    <div class='edit-delete-button'>
-        <input class='button' type="submit" value="Delete Venue" />
+        <div class='edit-delete-button'>
+            <input class='button' type="submit" value="Delete Venue" />
         </div>
     </form>
 </div>
 
 <div class="item-container">
-    <div>{{singleVenue.name}}</div>
+    <div class="name-item">
+        <div>{{singleVenue.name}}</div>
+    </div>
 
-    <div>Location</div>
-    <div>{{singleVenue.location}}</div>
+    <div class="location-wrapper">
+        <div>
+            <span class="material-icons">
+                place
+            </span>
+        </div>
+        <div class="location-item">{{singleVenue.location}}</div>
+    </div>
 
-    <div>Square Feet</div>
-    <div>{{singleVenue.squareFeet}}</div>
+    <div class="single-venue-container">
+        <div class="single-sqft-header">
+            <span class="material-icons">
+                square_foot
+            </span>
+        </div>
+        <div class="single-sqft-item">{{singleVenue.squareFeet}}</div>
 
-    <div>Parking</div>
-    <div>{{singleVenue.parkingAvailable}}</div>
+        <div class="single-parking-header">
+            <span class="material-icons">
+                local_parking
+            </span>
+        </div>
+        <div class="single-parking-item">{{singleVenue.parkingAvailable}}</div>
 
-    <div>Price</div>
-    <div >$ {{singleVenue.price}}</div>
+        <div class="single-price-header">Price:</div>
+        <div class="single-price-item">${{singleVenue.price}}</div>
+    </div>
 
-    <div>About Venue</div>
-    <div>{{singleVenue.about}}</div>
+    <div class="about-header">About Venue</div>
+    <div class="about-text-area">{{singleVenue.about}}</div>
+
 
 </div>
 

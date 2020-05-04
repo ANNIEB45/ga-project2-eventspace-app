@@ -1,23 +1,24 @@
 // Modal
 // Get the modal
-const modal = document.getElementById("myModal")
+const modal = document.querySelector("#myModal")
 console.log(modal)
 // Get the button that opens the modal
-const btn = document.querySelector(".myBtn")
+const button = document.querySelectorAll(".myBtn")
 
 // Get the close button
 const closeBtn = document.getElementsByClassName("close-btn")
+console.log(closeBtn)
 
-btn.addEventLister('click', () =>{
-    modal.style.display = 'block'
+button.addEventListener('click', () =>{
+    modal.style.display = 'flex'
 })
 console.log(btn)
 
-closeBtn.addEventLister('click', () =>{
+closeBtn.addEventListener('click', () =>{
     modal.style.display = 'none'
 })
  
-window.addEventLister('click', (e) =>{
+window.addEventListener('click', (e) =>{
     if(e.target === modal){
         modal.display.style = 'none'
     }

@@ -21,7 +21,12 @@ body{
     text-decoration: line-through;
     font-family: 'Yellowtail', cursive;
     margin-left: 60px;
-    color: oldlace;
+    color: darkgoldenrod;
+    opacity: 0.6;
+}
+
+.logo:hover{
+    color: dimgray
 }
 .navbar .material-icons{
     font-size: 45px;
@@ -29,7 +34,12 @@ body{
 }
 .icons{
     text-decoration: none;
-    color: lightslategrey;
+    color: dimgray;
+    opacity: 0.7;
+}
+
+.icons:hover{
+    color: darkgoldenrod
 }
 .hero-image-venue{
     background-image: url("https://freestocks.org/fs/wp-content/uploads/2018/02/food_and_drinks_market_lights-1000x667.jpg") ;
@@ -78,10 +88,12 @@ body{
 
 .venue-list{
     width: 100%;
-    max-width: 900px;
+    /* max-width: 900px; */
     display: flex;
     flex-wrap: wrap-reverse;
-    margin: 0 auto;
+    margin: 11px 0 25px 20px;
+    padding: 22px 0 50px 40px;
+
 }
 
 .venue-items a{
@@ -119,6 +131,8 @@ body{
     flex-direction: column;
     margin: 20px 25px;
     font-size: 20px;
+    border-top: 2px solid black;
+
 
 }
 
@@ -157,17 +171,33 @@ img{
     flex-direction: row;
     margin: 0 auto;
     border-top: 2px solid black;
-    background: darkgoldenrod;
-    padding: 60px;
+    background: dimgray;
+    opacity: 1;
     font-size: 25px;
+    height: 200px;
+
 }
 
+.footer-item{
+        /* margin-top: 40px; */
+        display: flex;
+        /* justify-content: center; */
+        align-items: center
+}
 .social-container{
     display: flex;
-    flex-direction: column;
-    margin: 0 0 0 80px;
+    flex-direction: row;
+    margin: 0 0 0 45px;
+    line-height: 43px;
+    color: white;
+    align-items: center
 }
 
+.social-container a{
+    text-decoration: none;
+    width: 12%;
+    padding: 0 31px 0 0;
+}
  .form-wrapper{
     display: flex;
     flex-direction: column;
@@ -307,6 +337,12 @@ img{
     overflow: hidden;
     position: relative;
 }
+
+
+
+
+
+
 /* Modal Styling */
 
 #myModal{
@@ -340,13 +376,30 @@ img{
     background: rosybrown;
 }
 
-
+.myBtn:hover{
+    background-color: rgb(201, 24, 130);
+    color: rgb(244, 237, 242);
+}
 
 .modal-header{
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: darkgoldenrod;
     color: white;
 }
+
+.modal-header .navbar{
+    border-bottom: 3px solid lightslategray;
+
+}
+.modal-header a{
+    color: dimgray;
+    text-decoration: none;
+
+}
+.modal-header a:hover{
+    color: white ;
+}
+
 .model-body{
     padding: 2px 16px;
 }
@@ -386,7 +439,7 @@ img{
 }
 
 .vendor-header{
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
 

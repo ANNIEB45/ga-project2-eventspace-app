@@ -3,7 +3,7 @@
 const modal = document.querySelector("#myModal")
 console.log(modal)  //showing as null in console
 // Get the button that opens the modal
-const button = document.querySelectorAll(".myBtn")
+const button = document.querySelectorAll(".myBtn")[0]
 console.log(button) //nodelist with one item = RIGHT
 
 // Get the close button
@@ -15,7 +15,8 @@ console.log(closeBtn) //empty HTMLCollection LIst
     // is not a function
 
 button.addEventListener('click', () =>{
-    modal.style.display = 'flex'
+    modal.style.display = 'block'
+    console.log("you clicked me")
 })
 console.log(button)
 

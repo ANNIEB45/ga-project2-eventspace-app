@@ -55,7 +55,7 @@ body{
 .hero-text{
     text-align: right;
     position: relative;
-    top: 76%;
+    top: 60%;
     left: 45%;
     transform: translate(-50%, -50%);
     color: white
@@ -70,7 +70,7 @@ body{
 
 .header{
     width: 100%;
-    font-size: 48px;
+    font-size: 53px;
 }
 
 .button{
@@ -166,6 +166,11 @@ img{
     background: rosybrown;
     border-radius: 4px;
 }
+
+.view-button button:hover{
+    background-color:  rgb(201, 24, 130);
+}
+
 .footer-container{
     display: flex;
     flex-direction: row;
@@ -198,7 +203,8 @@ img{
     width: 12%;
     padding: 0 31px 0 0;
 }
- .form-wrapper{
+
+.form-wrapper{
     display: flex;
     flex-direction: column;
     margin: 25px;
@@ -211,6 +217,8 @@ img{
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+    line-height: 45px;
+    margin-right: 35px;
 }
 
 .label-items{
@@ -338,12 +346,21 @@ img{
     position: relative;
 }
 
+/* ------------------------------------------------------------ */
+/* Edit Page Styling */
+.edit-container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 20px;
+    line-height: 35px;
+}
 
-
-
-
+/* ------------------------------------------------------------------- */
 
 /* Modal Styling */
+
+
 
 #myModal{
     background-color: rgba(120, 115, 115, 0.8) ;
@@ -353,7 +370,7 @@ img{
     transition: opacity .15s linear;
 }
 .modal{
-    /* display: none; */
+    display: none;
     position: fixed;
     padding-top: 50px;
     left: 0;
@@ -365,6 +382,10 @@ img{
     z-index: 30;
     /* background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.5); */
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 100%;
+    overflow: scroll;
 }
 
 .myBtn{
@@ -401,10 +422,12 @@ img{
 }
 
 .model-body{
-    padding: 2px 16px;
+    display: flex;
+    /* justify-content: center; */
+    width: 100%;
 }
 .modal-content{
-    position: relative;
+    /* position: relative; */
     background-color: #fefefe;
     padding: 0;
     margin-left: auto;
@@ -416,21 +439,35 @@ img{
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
 }
+
+.create-button{
+    background: dimgray;
+    margin: 0px 20px 15px 20px;
+    width: 725px;
+    padding: 13px;
+    font-size: 24px;
+    border-radius: 5px;
+    line-height: 25px;
+}
 .modal-footer{
     display: flex;
     justify-content: flex-end;
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: darkgoldenrod;
     color: white;
+    height: 65px;
 }
 
 .close-btn{
-    color: lightgray;
+    background: darkgoldenrod;
+    color: black;
+    opacity: 0.6;
     font-weight: 24px;
     font-weight: bold;
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
+    line-height: 10px;
 }
 
 .close-button-top{
@@ -451,7 +488,7 @@ img{
 }
 
 .close-btn:hover{
-    background-color: purple
+    background-color: rgb(201, 24, 130)
 }
 @keyframes animatetop {
     from {

@@ -7,7 +7,7 @@ const button = document.querySelectorAll(".myBtn")[0]
 console.log(button) //nodelist with one item = RIGHT
 
 // Get the close button
-const closeBtn = document.getElementsByClassName("close-btn")
+const closeBtn = document.getElementsByClassName("close-btn")[0]
 console.log(closeBtn) //empty HTMLCollection LIst
 
 // error message: script.js:14 
@@ -18,16 +18,20 @@ button.addEventListener('click', () =>{
     modal.style.display = 'block'
     console.log("you clicked me")
 })
-console.log(button)
 
 closeBtn.addEventListener('click', () =>{
     modal.style.display = 'none'
+    console.log("you clicked me")
+
+
 })
  
 window.addEventListener('click', (e) =>{
     if(e.target === modal){
         modal.display.style = 'none'
     }
+    console.log("you clicked me")
+
 })
 
 // for price input field

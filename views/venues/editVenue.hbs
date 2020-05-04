@@ -1,35 +1,67 @@
-<h1>Edit Venue</h1>
+<div class="container">
+  <div class="navbar">
+    <div class='logo-container'>
+      <a class='logo' href="/venue"> Fairy's Wand</a>
+    </div>
+    {{!-- use icon for edit/single/add pages --}}
+    <span class="material-icons">
+      <a class='icons' href="/venue">home</a>
+    </span>
+  </div>
+  <div class='border-bottom'></div>
 
-<a href="/venue">
-  <button>Home</button>
-</a>
+  <div class="img-container">
+    <img class='venue-image' src="{{singleVenue.image}}" alt="">
+  </div>
 
 
+  <div class="edit-container">
+    <div class="form-container">
+      <h1>Edit Venue</h1>
+      <div class="form-wrapper">
+        <form action="/venue/{{singleVenue._id}}?_method=PUT" method="POST">
 
-<form action="/venue/{{singleVenue._id}}?_method=PUT" method="POST">
-  <label>Venue</label>
-  <input type="text" name="name" value="{{singleVenue.name}}" />
+          <div class="form-items">
+            <label class="label-items">Venue</label>
+            <input type="text" name="name" value="{{singleVenue.name}}" />
+          </div>
 
-  <label>Location</label>
-  <input type="text" name="location" value="{{singleVenue.location}}" />
+          <div class="form-items">
+            <label class="label-items">Location</label>
+            <input type="text" name="location" value="{{singleVenue.location}}" />
+          </div>
 
-  <label>How many square feet</label>
-  <input type="number" name="squareFeet" value="{{singleVenue.squareFeet}}" />
+          <div class="form-items">
+            <label class="label-items">How many square feet</label>
+            <input type="number" name="squareFeet" value="{{singleVenue.squareFeet}}" />
+          </div>
 
-  <label>Is parking space available</label>
-  <input type="boolean" name="parkingAvailable" value="{{singleVenue.parkingAvailable}}" />
+          <div class="form-items">
+            <label class="label-items">Is parking space available</label>
+            <input type="boolean" name="parkingAvailable" value="{{singleVenue.parkingAvailable}}" />
+          </div>
 
-  <label>Price</label>
-  <input type="number" name="price" value="{{singleVenue.price}}" />
+          <div class="form-items">
+            <label class="label-items">Price (per hr)</label>
+            <input type="number" name="price" value="${{singleVenue.price}}" />
+          </div>
 
-  <label>About Space:</label>
-  <textarea type="text" name="about" rows="7" cols="30">{{singleVenue.about}}</textarea>
+          <div class="form-items">
+            <label class="label-items">About Space:</label>
+            <textarea type="text" name="about" rows="7" cols="30">{{singleVenue.about}}</textarea>
+          </div>
 
-  <label>Image URL</label>
-  <input type="text" name="image" value="{{singleVenue.image}}" />
+          <div class="form-items">
+            <label class="label-items">Image URL</label>
+            <input type="text" name="image" value="{{singleVenue.image}}" />
+          </div>
 
-  <input type="submit" value="Save" />
-</form>
+          <input type="submit" value="Save" />
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 {{!-- HOME BUTTON WORKS --}}
 {{!-- EDIT WORKS --}}

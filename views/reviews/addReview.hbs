@@ -5,11 +5,18 @@
 </a>
 
 <form action="/review" method="POST">
+
     <label>Date</label>
     <input type="datetime-local" name="date" />
 
+    <label class="label-items">Image URL</label>
+    <input type="text" name="image" />
+
+    <label>Name</label>
+    <input type="text" name="user" />
+
     <label>Comment</label>
-    <textarea type="text" name="comment" rows="5" cols="50"/></textarea>
+    <textarea type="text" name="comment" rows="5" cols="50" /></textarea>
 
 
     <input type="submit" value="Post" />

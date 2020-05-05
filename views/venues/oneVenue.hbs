@@ -13,14 +13,14 @@
     <div class="img-container">
         <img class='venue-image' src="{{singleVenue.image}}" alt="">
     </div>
-    <a href="/venue/{{singleVenue._id}}/edit">
+    {{!-- <a href="/venue/{{singleVenue._id}}/edit"> --}}
         <div class='edit-delete-button'>
-            <button class='button'>Edit Venue</button>
+    <button class='myBtn' data-toggle="modal" data-target="#myModal">Edit Venue</button>
         </div>
-    </a>
+    {{!-- </a> --}}
     <form action="/venue/{{singleVenue._id}}?_method=DELETE" method="POST">
         <div class='edit-delete-button'>
-            <input class='button' type="submit" value="Delete Venue" />
+            <input class='delete-btn button' type="submit" value="Delete Venue" />
         </div>
     </form>
 </div>
@@ -55,13 +55,95 @@
         <div class="single-parking-item">{{singleVenue.parkingAvailable}}</div>
 
         <div class="single-price-header">Price:</div>
-        <div class="single-price-item">${{singleVenue.price}}/hr</div>
+        <div class="single-price-item">${{singleVenue.price}}/hr </div>
     </div>
 
     <div class="about-header">About Venue</div>
     <div class="about-text-area">{{singleVenue.about}}</div>
+</div>
 
 
+
+
+{{!-- Edit Modal Popup Form --}}
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog sm-size">
+        {{!-- modal content:navbar,header,body-form --}}
+        <div class="modal-content">
+            <div class="modal-header">
+                {{!-- modal navbar w/logo and home button --}}
+                <div class="navbar">
+                    <div class='logo'>
+                        <a href="/venue"> Fairy's Paradise</a>
+                    </div>
+                    {{!-- use icon for edit/single/add pages --}}
+                    <span class="material-icons">
+                        <a href="/venue">home</a>
+                    </span>
+                </div>
+               <div class='border-bottom'></div>
+                {{!-- modal header --}}
+
+                <div class="close-button-top">
+                    <button type="button" class="close-btn-topOne" data-dismiss="modal">&times;</button>
+                </div>
+                <div class='vendor-header'>Edit Venue</div>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-container">
+                    <div class="form-wrapper">
+                        <form action="/venue/{{singleVenue._id}}?_method=PUT" method="POST">
+
+                            <div class="form-items">
+                                <label class="label-items">Venue</label>
+                                <input type="text" name="name" value="{{singleVenue.name}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label class="label-items">Location</label>
+                                <input type="text" name="location" value="{{singleVenue.location}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label class="label-items">How many square feet</label>
+                                <input type="number" name="squareFeet" value="{{singleVenue.squareFeet}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label class="label-items">Is parking space available</label>
+                                <input type="boolean" name="parkingAvailable"
+                                    value="{{singleVenue.parkingAvailable}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label class="label-items">Price (per hr)</label>
+                                <input type="number" name="price" value="{{singleVenue.price}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label class="label-items">About Space:</label>
+                                <textarea type="text" name="about" rows="7" cols="30">{{singleVenue.about}}</textarea>
+                            </div>
+
+                            <div class="form-items">
+                                <label class="label-items">Image URL</label>
+                                <input type="text" name="image" value="{{singleVenue.image}}" />
+                            </div>
+
+                            <input type="submit" value="Save" />
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 

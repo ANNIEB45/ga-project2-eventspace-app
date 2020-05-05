@@ -7,10 +7,8 @@ const reviewSchema = new Schema({
         type: String,
         required: true
     },
-    user: String,
     date: Date,
     comment: String,
-    image: String
 })
 
 const reviewCollection = mongoose.model('review', reviewSchema)

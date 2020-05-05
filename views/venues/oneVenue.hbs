@@ -14,9 +14,9 @@
         <img class='venue-image' src="{{singleVenue.image}}" alt="">
     </div>
     {{!-- <a href="/venue/{{singleVenue._id}}/edit"> --}}
-        <div class='edit-delete-button'>
-    <button class='myBtn' data-toggle="modal" data-target="#myModal">Edit Venue</button>
-        </div>
+    <div class='edit-delete-button'>
+        <button class='myBtn' data-toggle="modal" data-target="#myModal">Edit Venue</button>
+    </div>
     {{!-- </a> --}}
     <form action="/venue/{{singleVenue._id}}?_method=DELETE" method="POST">
         <div class='edit-delete-button'>
@@ -82,7 +82,7 @@
                         <a href="/venue">home</a>
                     </span>
                 </div>
-               <div class='border-bottom'></div>
+                <div class='border-bottom'></div>
                 {{!-- modal header --}}
 
                 <div class="close-button-top">
@@ -132,9 +132,10 @@
                                 <input type="text" name="image" value="{{singleVenue.image}}" />
                             </div>
 
-                            <input type="submit" value="Save" />
+                            <input class="create-button" type="submit" value="Save" />
+                        </form>
                     </div>
-                    </form>
+
                 </div>
             </div>
 

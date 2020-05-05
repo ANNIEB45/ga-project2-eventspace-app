@@ -67,7 +67,7 @@ reviewRouter.post('/', (req, res) => {
             // after the review has been created
             //redirected back to the blog post where the new review is created
             //so redirect back to oneBlog of blog post
-            res.redirect(`/blog/`)
+            res.redirect(`/blog/${req.body.blogId}`)
             // res.json('review created')
         })
         .catch(err => {

@@ -6,6 +6,7 @@ htm, body{
 body{
     font-family: 'Maven Pro', sans-serif;
 }
+/* styling for all pages(headers,nav bars,) */
 
 .navbar{
     display: flex;
@@ -512,3 +513,81 @@ img{
     } 
 }
 
+/* Review Page Styling */
+.comment-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.comment-header{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+.comment-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 25px;
+}
+.comment-items-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+
+}
+
+.comment-items-container .comment-items-wrapper{
+    overflow: hidden;
+    max-height: 200px;
+}
+.comment-items-wrapper{
+    display: flex;
+    flex-flow: column;
+    border: 3px solid darkgray;
+    border-radius: 10px;
+    padding-top: 22px;
+    margin: 5px 0;
+}
+
+.comment-date-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    line-height: 30px;
+    align-items: flex-end;
+
+}
+
+.comment-item{
+    display: flex;
+    flex-flow: column;
+    height: 92px;
+    overflow: hidden;
+}
+.comment-paragraph{
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.comment-button-link{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    text-decoration: none;
+    /* outline: 0; */
+    /* color: darkgoldenrod; */
+    width: 100%;
+}
+
+.comment-button-link button{
+    border: none;
+    /* text-decoration: none; */
+    outline: 0;
+    color: darkgoldenrod;
+    font-size: 17px;
+}

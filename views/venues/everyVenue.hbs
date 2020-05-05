@@ -24,30 +24,31 @@
         {{#each allVenues}}
         <div class="venue-items">
             <img src="{{image}}" alt="">
-            <a class="mainpage-link" href="/venue/{{_id}}">
-                <div class="venue-titles">
+            <div class="venue-titles">
+                <a class="mainpage-link" href="/venue/{{_id}}">
 
                     <div>{{name}}</div>
-                    <br>
                     <div class="main-page-location-item">{{location}}</div>
                     <br>
-            </a>
-            <br>
-
-            <div class="view-button">
-                <a href="/venue/{{_id}}">
-                    <button>View Venue</button>
                 </a>
+                <br>
+
+                <div class="view-button">
+                    <a href="/venue/{{_id}}">
+                        <button>View Venue</button>
+                    </a>
+                </div>
             </div>
         </div>
+
+        {{/each}}
     </div>
-
-
-    {{/each}}
 </div>
-</div>
+{{!-- </div> --}}
+
 
 {{!-- ---------------------------------------------------------------------------------------------------------- --}}
+
 
 {{!-- Add Venue Code for Pop-up form --}}
 <div class="modal fade" id="myModal" role="dialog">
@@ -68,7 +69,7 @@
                 <div class='border-bottom'></div>
                 {{!-- modal header --}}
                 <div class="close-button-top">
-                    {{!-- <button type="button" class="close-btn" data-dismiss="modal">&times;</button> --}}
+                    <button type="button" class="close-btn-topOne" data-dismiss="modal">&times;</button>
                 </div>
                 <div class='vendor-header'>List Your Venue With Us</div>
             </div>
@@ -95,7 +96,7 @@
                                 <label class="label-items">Is parking space available</label>
                                 <input type="boolean" name="parkingAvailable" />
                             </div>
-                            
+
                             <div class="form-items">
                                 {{!-- convert to US currency format --}}
                                 <label class="label-items">Price($)</label>

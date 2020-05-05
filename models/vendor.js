@@ -8,7 +8,6 @@ const vendorSchema = new Schema({
         type: String,
         required: true
     },
-    local: Boolean,
     category: {
         type: String,
         required: true,

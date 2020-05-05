@@ -1,40 +1,79 @@
-<div class="navbar">
-<div class='logo'>
-    <a href="/venue"> Fairy's Paradise</a>
+{{!-- <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog sm-size">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                {{!-- modal navbar w/logo and home button --}}
+                <div class="navbar">
+                    <div class='logo'>
+                        <a href="/venue"> Fairy's Paradise</a>
+                    </div>
+                    {{!-- use icon for edit/single/add pages --}}
+                    <span class="material-icons">
+                        <a href="/venue">home</a>
+                    </span>
+                </div>
+                <div class='border-bottom'></div>
+                {{!-- modal header --}}
+
+                <div class="close-button-top">
+                    <button type="button" class="close-btn-topOne" data-dismiss="modal">&times;</button>
+                </div>
+                <div class='vendor-header'>Edit Venue</div>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-container">
+                    <div class="form-wrapper">
+                        <form action="/vendor/{{singleVendor._id}}?_method=PUT" method="POST">
+
+                            <div class="form-items">
+                                <label>Business Name</label>
+                                <input type="text" name="name" value="{{singleVendor.name}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>Are you local?</label>
+                                <input type="text" name="local" value="{{singleVendor.local}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>What kind of Business?</label>
+                                <input type="text" name="category" value="{{singleVendor.category}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>Email</label>
+                                <input type="text" name="email" value="{{singleVendor.email}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>Phone Number</label>
+                                <input type="text" name="phoneNumber" value="{{singleVendor.phoneNumber}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>Website</label>
+                                <input type="text" name="website" value="{{singleVendor.website}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>Tell us about your busines:</label>
+                                <textarea type="text" name="details">{{singleVendor.details}}</textarea>
+                            </div>
+
+                            <input class="create-button" type="submit" value="Save" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
-{{!-- use icon for edit/single/add pages --}}
-<span class="material-icons">
-<a href="/venue">home</a>  
-</span>
 </div>
-<div class='border-bottom'></div>
-
-
-<form action="/vendor/{{singleVendor._id}}?_method=PUT" method="POST">
-    <label>Business Name</label>
-    <input type="text" name="name" value="{{singleVendor.name}}" />
-
-    <label>Are you local?</label>
-    <input type="text" name="local" value="{{singleVendor.local}}" />
-
-    <label>What kind of Business?</label>
-    <input type="text" name="category" value="{{singleVendor.category}}" />
-
-    <label>Email</label>
-    <input type="text" name="email" value="{{singleVendor.email}}" />
-
-    <label>Phone Number</label>
-    <input type="text" name="phoneNumber" value="{{singleVendor.phoneNumber}}" />
-
-    <label>Website</label>
-    <input type="text" name="website" value="{{singleVendor.website}}" />
-
-    <label>Tell us about your busines:</label>
-    <textarea type="text" name="details" >{{singleVendor.details}}</textarea>
-    
-    <input type="submit" value="Save" />
-
-</form>
-
 {{!-- BUG: detail field does not stay pre-filled and if no input deletes previous text on submission --}}
-{{!-- EDIT WORKS --}}
+EDIT WORKS --}}

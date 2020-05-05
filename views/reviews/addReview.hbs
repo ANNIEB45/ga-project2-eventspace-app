@@ -1,3 +1,13 @@
+<div class="navbar">
+    <div class='logo-container'>
+        <a class='logo' href="/review"> Fairy's Wand</a>
+    </div>
+    {{!-- use icon for edit/single/add pages --}}
+    <span class="material-icons">
+        <a class='icons' href="/review">home</a>
+    </span>
+</div>
+
 <h1>Add New Review</h1>
 
 <a href="/review">
@@ -8,12 +18,6 @@
 
     <label>Date</label>
     <input type="datetime-local" name="date" />
-
-    <label class="label-items">Image URL</label>
-    <input type="text" name="image" />
-
-    <label>Name</label>
-    <input type="text" name="user" />
 
     <label>Comment</label>
     <textarea type="text" name="comment" rows="5" cols="50" /></textarea>

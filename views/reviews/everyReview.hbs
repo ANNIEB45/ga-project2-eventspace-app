@@ -1,26 +1,42 @@
-<h1>All Comments</h1>
-
-<a href="/review/new">
-    <button>Add a Comment</button>
-</a>
-<br>
-{{#each allReviews}}
-
-<a href="/review/{{_id}}">
-<button>See Comment</button>
-</a>
-    <div>Date</div>
-    <div>{{date}}</div>
-    <br>
-
-    <div>Comment</div>
-    <div>{{comment}}</div>
-    <br>
-
+<div class="navbar">
+    <div class='logo-container'>
+        <a class='logo' href="/review"> Fairy's Wand</a>
+    </div>
+    {{!-- use icon for edit/single/add pages --}}
+    <span class="material-icons">
+        <a class='icons' href="/review">home</a>
+    </span>
 </div>
-<hr>
-{{/each}}
+<div class="comment-container">
+    <div class='comment-header'>User Blog Post Comment File</div>
+    <div></div>
+    <a href="/review/new">
+        <button class='myBtn'>Add a Comment</button>
+    </a>
+    <div class="comment-wrapper">
+        {{#each allReviews}}
 
+        <div class="comment-items-container">
+            <div class="comment-items-wrapper">
+
+                <div class="comment-item">
+                    <div class="comment-paragraph">{{comment}}</div>
+                </div>
+                <a class="comment-button-link" href="/review/{{_id}}">
+                    <button>See Comment</button>
+                </a>
+
+                <div class="comment-date-wrapper">
+                    <div>{{date}}</div>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+</div>
 
 {{!-- SEE REVIEW BUTTON WORKS --}}
 {{!-- ALL REVIEWS TEMPLATE WORKS --}}

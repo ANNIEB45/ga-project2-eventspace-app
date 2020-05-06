@@ -8,39 +8,66 @@
     </span>
 </div>
 
-<h1>All Blogs</h1>
 
-<a href="/blog/new">
-    <button>Create Post</button>
-</a>
-<br>
+<div class="blog-container">
+    <h1>All Blogs</h1>
 
-{{#each allBlogs}}
+    <a href="/blog/new">
+        <button>Create Post</button>
+    </a>
+    <br>
 
-<a href="/blog/{{_id}}">
-    <button>See Blog</button>
-</a>
+    <div class="blog-wrapper">
+        {{#each allBlogs}}
+        <div class="blog-content">
+            <img src="{{image}}" alt="">
+            <a class="mainpage-link" href="/vendor/{{_id}}">
 
-<div>Title</div>
-<div>{{title}}</div>
-<br>
+                <div class="blog-title">
+                    <div>{{title}}</div>
+                </div>
 
-<div>Author</div>
-<div>{{author}}</div>
-<br>
+                <div class="blog-author">
+                    <div class="blog-by-item">by</div>
+                    <div>{{author}}</div>
+                </div>
 
-<div>Date</div>
-<div>{{date}}</div>
-<br>
+            </a>
+            <div>Date</div>
+            <div>{{date}}</div>
+
+            <a href="/blog/{{_id}}">
+                <div class="blog-button-container">
+                    <button class="blog-button">See Blog</button>
+                </div>
+            </a>
+
+        </div>
 
 
-<div>Post</div>
-<div>{{post}}</div>
-<br>
+        {{/each}}
+    </div>
+</div>
 
-<hr>
-{{/each}}
 
+
+
+<footer>
+    <div class='footer-container'>
+        <div class="footer-item">Created by: <br> Annie T. Bellefleur</div>
+        <div class="social-container">
+            <a href="https://www.linkedin.com/in/annie-t-bellefleur-04a696a7/">
+                <img src="linkedIn.png" alt="">
+            </a>
+            <a href="https://twitter.com/AfiaTheLegend">
+                <img src="twitter.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/browneyed_royalty/">
+                <img src="instagram.png" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
 
 {{!-- SEE BLOG BUTTON WORKS --}}
 {{!-- ALL BLOGS TEMPLATE WORKS --}}

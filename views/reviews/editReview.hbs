@@ -16,20 +16,22 @@
     <form action="/review/{{singleReview._id}}?_method=PUT" method="POST">
         <div class="comment-edit-wrapper">
             <div class="comment-edit-items">
-                <label>Date</label>
-                <input type="datetime" name="date" value="{{singleReview.date}}" />
+                <label class="date-item">Date</label>
+                <input class="date-item-input" type="datetime" name="date" value="{{singleReview.date}}" />
             </div>
-            
+
             <div class="comment-edit-items">
-                <label>Comment</label>
-                <textarea type="text" name="comment" rows="5" cols="50"
+                <label class="edit-comment-item">Comment</label>
+                <textarea class="edit-comment-item-input" type="text" name="comment" rows="5" cols="50"
                     value="{{singleReview.comment}}">{{singleReview.comment}}</textarea>
             </div>
 
-            <input type="submit" value="Save" />
+            <input class='save-button' type="submit" value="Save" />
         </div>
     </form>
 
 </div>
+
+{{!-- COMPLETED STYLING --}}
 {{!-- HOME BUTTON WORKS --}}
 {{!-- EDIT WORKS --}}

@@ -8,18 +8,20 @@
     <label>Date</label>
     <input type="datetime-local" name="date" value="{{singleBlog.date}}" />
 
- <label>Title</label>
+    <label>Title</label>
     <input type="text" name="title" value="{{singleBlog.title}}" />
 
- <label>Author</label>
+    <label>Author</label>
     <input type="text" name="author" value="{{singleBlog.author}}" />
-<br>
-<br>
+    <br>
+    <br>
 
     <label>Post</label>
-    <textarea type="text" name="post" rows="20" cols="80" value="{{singleBlog.post}}"></textarea>
+    <textarea type="text" name="post" rows="20" cols="80" value="{{singleBlog.post}}">{{singleBlog.post}}</textarea>
 
-    
+    <label class="label-items">Image URL</label>
+    <input type="text" name="image" value="{{singleBlog.image}}" />
+
     <input type="submit" value="Save" />
 
 </form>

@@ -17,9 +17,10 @@
 <br>
 
 
-<div>Post</div>
-<div>{{singleBlog.post}}</div>
-<br>
+<div class="single-blog-post">
+    <img class='single-blog-image' src="{{singleBlog.image}}" alt="">
+    <div class="single-blog-item">{{singleBlog.post}}</div>
+</div>
 
 
 <a href="/blog/{{singleBlog._id}}/edit">

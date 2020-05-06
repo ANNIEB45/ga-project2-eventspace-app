@@ -841,3 +841,126 @@ a .blog-create-button{
     display: flex;
     justify-content: flex-end;
 }
+
+.add-blog-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+.add-blog-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px;
+}
+
+.blog-create-item{
+        /* display: flex; */
+        width: 100%;
+        /* flex-direction: column; */
+        border-bottom: 3px solid slategray;
+        margin: 20px 0;
+}
+
+.blog-create{
+    margin: 30px 0 15px 75px;
+    font-size: 50px;
+}
+
+.blog-post-button{
+    transition-duration: 0.4s;
+    margin: 21px 46px 39px 20px;
+    padding: 15px 50px;
+    border-radius: 9px;
+    font-size: 24px;
+    background: rosybrown;
+}
+
+.blog-post-button:hover{
+    background-color: rgb(201, 24, 130);
+    color: rgb(244, 237, 242);
+}
+
+.add-blog-item{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.add-blog-date{
+    font-style: italic;
+    margin-right: 35px;
+    font-size: 32px;
+}
+
+.add-blog-date-input{
+    font-size: 17px;
+    border-radius: 7px;
+    border: 2px solid slategrey;
+}
+
+.add-blog-title{
+    margin: 0px 27px 0 15px;
+    font-style: italic;
+    font-size: 27px;
+}
+
+.add-blog-post-title{
+    margin: 0px 40px 0 15px;
+    font-style: italic;
+    font-size: 35px;
+}
+.add-blog-input{
+    border: 2px solid slategrey;
+    border-radius: 10px;
+    padding: 20px 0;
+    width: 580px;
+    text-align: center;
+    font-size: 23px;
+}
+
+.add-blog-post{
+    margin: 0 30px 0 0;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.add-blog-text-area{
+    border: 2px solid slategrey;
+    width: 850px;
+    height: 420px;
+    font-size: 25px;
+}
+
+.single-blog-item{
+    overflow-wrap: break-word;
+    white-space: break-spaces;
+    font-size: 20px;
+    line-height: 30px;
+    text-align-last: left;
+    margin: 0 20px 0 75px;
+    border-left: 2px solid slategrey;
+    border-right: 2px solid slategrey;
+    padding: 0 30px 0 30px;
+    width: 80%;
+}
+
+.single-blog-image{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 82%;
+    height: 400px;
+    /* background-color: turquoise; */
+    /* overflow: hidden; */
+    /* object-fit: cover; */
+    margin: 5px 0 30px 95px;
+    border: 10px solid black;
+    border-radius: 20px;
+}
+.single-blog-post{
+
+}

@@ -9,11 +9,11 @@
 </div>
 
 
-<a href="/blog/{{singleBlog._id}}/edit">
-    <div class='edit-delete-button'>
-        <button class='button'>Edit Venue</button>
-    </div>
-</a>
+{{!-- <a href="/blog/{{singleBlog._id}}/edit"> --}}
+<div class='edit-delete-button'>
+    <button class='myBtn' data-toggle="modal" data-target="#myModal">Edit Venue</button>
+</div>
+{{!-- </a> --}}
 
 <form action="/blog/{{singleBlog._id}}?_method=DELETE" method="POST">
     <div class='edit-delete-button'>
@@ -90,3 +90,80 @@
 
     {{/each}}
 </div>
+
+
+{{!-- ------------------------------------------------------------------------------------------------ --}}
+
+
+{{!-- EDIT MODAL POP UP --}}
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog sm-size">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                {{!-- modal navbar w/logo and home button --}}
+                <div class="navbar">
+                    <div class='logo'>
+                        <a href="/blog"> Fairy's Paradise</a>
+                    </div>
+                    {{!-- use icon for edit/single/add pages --}}
+                    <span class="material-icons">
+                        <a href="/blog">home</a>
+                    </span>
+                </div>
+                <div class='border-bottom'></div>
+                {{!-- modal header --}}
+
+                <div class="close-button-top">
+                    <button type="button" class="close-btn-topOne" data-dismiss="modal">&times;</button>
+                </div>
+                <div class='vendor-header'>Edit Blog Post</div>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-container">
+                    <div class="form-wrapper">
+
+                        <form action="/blog/{{singleBlog._id}}?_method=PUT" method="POST">
+                            <div class="form-items">
+                                <label>Date</label>
+                                <input type="datetime-local" name="date" value="{{singleBlog.date}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>Title</label>
+                                <input type="text" name="title" value="{{singleBlog.title}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>Author</label>
+                                <input type="text" name="author" value="{{singleBlog.author}}" />
+                            </div>
+
+                            <div class="form-items">
+                                <label>Post</label>
+                                <textarea type="text" name="post" rows="20" cols="80"
+                                    value="{{singleBlog.post}}">{{singleBlog.post}}</textarea>
+                            </div>
+
+                            <div class="form-items">
+                                <label class="label-items">Image URL</label>
+                                <input type="text" name="image" value="{{singleBlog.image}}" />
+                            </div>
+
+                            <input class="create-button" type="submit" value="Save" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- HOME BUTTON WORKS --}}
+{{!-- EDIT WORKS --}}

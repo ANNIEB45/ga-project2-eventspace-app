@@ -709,12 +709,58 @@ img{
     border: 3px solid;
 }
 
-/* .blog-container{
-    display: flex;
-    flex-direction: column;
+.hero-image-blog{
+    background-image: url(https://freestocks.org/fs/wp-content/uploads/2019/03/cup_of_coffee_and_a_newspaper_on_the_table_4-1000x667.jpg);
+    background-color: #cccccc;
+    height: 345px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    z-index: -2;
+}
+ 
+.hero-text-blog{
+    text-align: right;
+    position: relative;
+    top: 73%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: slategray;
+}
+
+.blog-header{
     width: 100%;
-    margin: 0 auto;
-}*/
+    font-size: 85px;
+    text-transform: lowercase;
+    font-style: italic;
+}
+a .blog-create-button{
+    transition-duration: 0.4s;
+    margin: -18px 20px 40px 20px;
+    padding: 20px;
+    border-radius: 9px;
+    font-size: 20px;
+    background: rosybrown;
+}
+.blog-create-button{
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rosybrown;
+}
+
+.blog-create-button:hover{
+    background-color: rgb(201, 24, 130);
+    color: rgb(244, 237, 242);
+}
+
+.blog-container h1{
+    font-size: 65px;
+    margin: 35px 70px;
+    font-style: italic;
+}
+  
 
 .blog-wrapper{
     width: 100%;
@@ -763,11 +809,22 @@ img{
     position: relative;
     margin: 15px;
     font-size: 18px;
+    color: gray;
+
 
 }
 
 .blog-by-item{
     margin: 0 5px 0 0;
+}
+
+.blog-date-item{
+    color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0px 0 15px 15px;
+    font-size: 18px;
 }
 
 .blog-button{

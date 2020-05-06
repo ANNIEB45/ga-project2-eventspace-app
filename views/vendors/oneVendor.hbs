@@ -33,25 +33,29 @@
     <br>
 
     <div class="location-wrapper">
-        <div>What Type of Business</div>
+
         <div>{{singleVendor.category}}</div>
         <br>
     </div>
-    <div>Email</div>
-    <div>{{singleVendor.email}}</div>
-    <br>
 
-    <div>Phone Number</div>
-    <div>{{singleVendor.phoneNumber}}</div>
-    <br>
+    <div class="information-container">
+        <div>Email</div>
+        <div>{{singleVendor.email}}</div>
+        <br>
 
-    <div>Vendor Details</div>
-    <div>{{singleVendor.details}}</div>
-    <br>
+        <div>Phone Number</div>
+        <div>{{singleVendor.phoneNumber}}</div>
+        <br>
 
-    <div>Website</div>
-    <div>{{singleVendor.website}}</div>
-    <br>
+        <div>Website</div>
+        <div>{{singleVendor.website}}</div>
+        <br>
+
+        <div>Vendor Details</div>
+        <div>{{singleVendor.details}}</div>
+        <br>
+
+    </div>
 </div>
 {{!-- INCOMPLETE- NEEDS MORE STYLING --}}
 
@@ -117,7 +121,7 @@
                                 <textarea type="text" name="details">{{singleVendor.details}}</textarea>
                             </div>
 
-                              <div class="form-items">
+                            <div class="form-items">
                                 <label class="label-items">Image URL</label>
                                 <input type="text" name="image" value="{{singleVendor.image}}" />
                             </div>

@@ -1051,5 +1051,10 @@ a .blog-create-button{
     width: 150px;
 }
 
+.information-container{
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0 50px;
+}
 
 

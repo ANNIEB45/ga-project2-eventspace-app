@@ -1,35 +1,46 @@
-<h1>Blog</h1>
+<div class="navbar">
+    <div class='logo-container'>
+        <a class='logo' href="/blog"> Fairy's Wand</a>
+    </div>
+    {{!-- use icon for edit/single/add pages --}}
+    <span class="material-icons">
+        <a class='icons' href="/blog">home</a>
+    </span>
+</div>
 
-<a href="/blog">
-    <button>Home</button>
+
+<a href="/blog/{{singleBlog._id}}/edit">
+    <div class='edit-delete-button'>
+        <button class='button'>Edit Venue</button>
+    </div>
 </a>
 
-<div>Title</div>
-<div>{{singleBlog.title}}</div>
-<br>
+<form action="/blog/{{singleBlog._id}}?_method=DELETE" method="POST">
+    <div class='edit-delete-button'>
+        <input class="button" type="submit" value="Delete Review" />
+    </div>
+</form>
 
-<div>Author</div>
-<div>{{singleBlog.author}}</div>
-<br>
 
-<div>Date</div>
-<div>{{singleBlog.date}}</div>
-<br>
 
+{{!-- <a href="/blog"> --}}
+
+<div class="single-blog-wrapper">
+    <div class="single-blog-title">{{singleBlog.title}}</div>
+    <br>
+
+    <div class="single-blog-author">{{singleBlog.author}}</div>
+    <br>
+
+    <div>{{singleBlog.date}}</div>
+    <br>
+</div>
 
 <div class="single-blog-post">
     <img class='single-blog-image' src="{{singleBlog.image}}" alt="">
     <div class="single-blog-item">{{singleBlog.post}}</div>
 </div>
 
-
-<a href="/blog/{{singleBlog._id}}/edit">
-    <button>Edit Blog</button>
-</a>
-
-<form action="/blog/{{singleBlog._id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Blog" />
-</form>
 
 {{!-- DELETE BUTTON WORKS --}}
 {{!-- EDIT BUTTON WORKS --}}
@@ -38,35 +49,44 @@
 
 {{!-- -------------------------------------------------------- --}}
 {{!-- CREATE REVIEW FIELD --}}
+
+
 <form action="/review" method="POST">
-    <input type="hidden" value="{{singleBlog._id}}" name="blogId" />
+    <div class="add-review-form">
 
-    <h1>Add A Comment</h1>
-    <br>
+        <input type="hidden" value="{{singleBlog._id}}" name="blogId" />
 
-    <label>Date</label>
-    <input type="date" name="date" />
-    </br>
-    <br>
+        <h1>Add A Comment</h1>
 
-    <label>Comment</label>
-    <textarea type="text" name="comment" rows="5" cols="50"></textarea>
+        <div class="add-review-form-date">
+            <label>Date</label>
+            <input class="add-review-date" type="date" name="date" />
+        </div>
 
+        <div class="add-review-form-comment">
+            <label class="add-review-comment-title">Comment</label>
+            <textarea class="add-review-textarea" type="text" name="comment" rows="5" cols="50"></textarea>
+        </div>
 
-    <input type="submit" value="Create" />
+        <div class="add-review-create-button">
+            <input class="review-create-button" type="submit" value="Create" />
+        </div>
+
+    </div>
 </form>
 
+<div class="blog-review">
+    {{!-- REVIEW FIELD --}}
+    <h1>Comments</h1>
+    {{#each reviews}}
 
-{{!-- REVIEW FIELD --}}
-<h1>Reviews</h1>
-{{#each reviews}}
+    {{date}}
+    <br>
+    {{comment}}
+    <br>
 
-{{date}}
-<br>
-{{comment}}
-<br>
+    {{!-- {{blogId}} --}}
 
-{{!-- {{blogId}} --}}
 
-<hr>
-{{/each}}
+    {{/each}}
+</div>

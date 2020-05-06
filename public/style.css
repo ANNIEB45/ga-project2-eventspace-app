@@ -56,10 +56,10 @@ body{
 .hero-text{
     text-align: right;
     position: relative;
-    top: 60%;
-    left: 45%;
+    top: 92%;
+    left: 46%;
     transform: translate(-50%, -50%);
-    color: white
+    color: slategrey;
 }
 
 
@@ -961,6 +961,92 @@ a .blog-create-button{
     border: 10px solid black;
     border-radius: 20px;
 }
-.single-blog-post{
 
+.single-blog-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 0 75px 0 113px;
+    padding: 0 65px 0px 80px;
+    font-size: 20px;
+    line-height: 18px;
+    color: black;
+
+}
+
+.single-blog-post{
+    border-bottom: 2px solid slategrey;
+    padding-bottom: 20px;
+}
+
+.single-blog-title{
+    font-size: 40px;
+
+}
+
+.single-blog-author{
+    font-size: 26px;
+    line-height: 36px;
+    color: slategrey;
+}
+
+.blog-review{
+    margin: 61px 40px 20px 20px;
+    height: 165px;
+    border-top: 3px solid;
+}
+
+.add-review-form{
+    margin: 40px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-review-form h1{
+    text-align: center;
+
+}
+
+.add-review-form-date{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 20px 0;
+    line-height: 29px;
+    font-size: 25px;
+}
+
+.add-review-form-comment{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    font-size: 25px;
+
+}
+.add-review-comment-title{
+    margin-bottom: 20px;
+
+}
+
+.add-review-date{
+    margin: 20px 0;
+    padding: 5px 36px 5px 0;
+}
+.add-review-textarea{
+    height: 299px;
+    font-size: 20px;
+}
+
+.add-review-create-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.review-create-button{
+    font-size: 22px;
+    line-height: 32px;
+    background: rosybrown;
+    border-radius: 11px;
+    border: 5px solid slategray;
+    width: 150px;
 }

@@ -19,7 +19,8 @@ const blogSchema = new Schema({
         type:String,
         required: true,
         minlength: 100
-    }
+    },
+    image: String
 })
      
 

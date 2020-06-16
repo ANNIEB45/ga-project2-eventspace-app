@@ -20,10 +20,10 @@ https://drive.google.com/open?id=1GvyOqlu0g3Xs-7BJTxr9BliL0pyqpKOA
 https://drive.google.com/open?id=1N_ouXNiFaOIdsfC68EhuuIF_LlCXs-D1
 
 ## Heroku Site
-[!Fairy's Wand Venue](https://fairys-wand.herokuapp.com/venue)
-https://fairys-wand.herokuapp.com/vendor
-https://fairys-wand.herokuapp.com/blog
-https://fairys-wand.herokuapp.com/review
+### _[!Fairy's Wand Venue Page](https://fairys-wand.herokuapp.com/venue)_
+### _[!Fairy's Wand Vendor Page](https://fairys-wand.herokuapp.com/vendor)_
+### _[!Fairy's Wand Blog Page](https://fairys-wand.herokuapp.com/blog)_
+### _[!Fairy's Wand Review](https://fairys-wand.herokuapp.com/review)_
 
 
 

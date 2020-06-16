@@ -1,9 +1,9 @@
 # ga-project2-eventspace-app
 
-Fairy Wand is an all purpose application for event planner.
+## Fairy Wand is an all purpose application for event planner.
 
-Venue Wireframe:
-https://drive.google.com/open?id=1p4wHoqv99YoJANZ19QNk9Ed4Vv-xyIyB
+### _Venue Wireframe:_
+[https://drive.google.com/open?id=1p4wHoqv99YoJANZ19QNk9Ed4Vv-xyIyB]
 
 Vendor Wireframe:
 https://drive.google.com/open?id=1yatGlZw7DU1gNnSPOnFJQJyHvglJ0XOn
